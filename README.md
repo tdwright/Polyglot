@@ -1,4 +1,1 @@
-Polyglot
-========
-
-Ployglot Framework for Sensory Substitution Devices
+http://tdwright.github.com/Polyglot/
