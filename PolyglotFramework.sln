@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCap", "ScreenCap\ScreenCap.csproj", "{D0999063-7151-45F3-B674-490EAE40CB4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroLibrary", "MicroTimer\MicroLibrary.csproj", "{E4B57D01-DC17-4204-B93F-E0BA6281E81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchPad", "TouchPad\TouchPad.csproj", "{BBDE9F5B-FF68-4B5D-BA71-FE6D8DE237DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyglotPreferences", "PolyglotPreferences\PolyglotPreferences.csproj", "{CE119B5A-3C83-4C54-8DC3-48A259F142ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyglotComposer", "PolyglotComposer\PolyglotComposer.csproj", "{55D92EB0-7C7E-46AE-B839-CC547C563BA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyglotEngine", "PolyglotEngine\PolyglotEngine.csproj", "{68C960B6-4F97-4848-AC89-3BBEE33DAB4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0999063-7151-45F3-B674-490EAE40CB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0999063-7151-45F3-B674-490EAE40CB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0999063-7151-45F3-B674-490EAE40CB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0999063-7151-45F3-B674-490EAE40CB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B57D01-DC17-4204-B93F-E0BA6281E81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B57D01-DC17-4204-B93F-E0BA6281E81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B57D01-DC17-4204-B93F-E0BA6281E81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B57D01-DC17-4204-B93F-E0BA6281E81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDE9F5B-FF68-4B5D-BA71-FE6D8DE237DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDE9F5B-FF68-4B5D-BA71-FE6D8DE237DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDE9F5B-FF68-4B5D-BA71-FE6D8DE237DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDE9F5B-FF68-4B5D-BA71-FE6D8DE237DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE119B5A-3C83-4C54-8DC3-48A259F142ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE119B5A-3C83-4C54-8DC3-48A259F142ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE119B5A-3C83-4C54-8DC3-48A259F142ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE119B5A-3C83-4C54-8DC3-48A259F142ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D92EB0-7C7E-46AE-B839-CC547C563BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D92EB0-7C7E-46AE-B839-CC547C563BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D92EB0-7C7E-46AE-B839-CC547C563BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D92EB0-7C7E-46AE-B839-CC547C563BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C960B6-4F97-4848-AC89-3BBEE33DAB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C960B6-4F97-4848-AC89-3BBEE33DAB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C960B6-4F97-4848-AC89-3BBEE33DAB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C960B6-4F97-4848-AC89-3BBEE33DAB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
