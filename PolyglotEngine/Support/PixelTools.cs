@@ -58,7 +58,7 @@ namespace PolyglotFramework
             else
             {
                 // work out where the origin of our sub-region will be
-                int TLcorner = centrePixel - (BytesPerPixel * (Radius + (Radius*stride)));
+                int TLcorner = centrePixel - (BytesPerPixel * (Radius + (Radius * stride)));
                 double weightCumulative = 0;
                 double[] rgbCumulative = new double[3] { 0d, 0d, 0d };
                 for (int row = 0; row < diameter; row++)
@@ -67,20 +67,32 @@ namespace PolyglotFramework
                     {
                         // find the start of this pixel
                         int pixelStart = TLcorner + (BytesPerPixel * (col + (row * stride)));
-                        
-                        // work out the distance from the centre of the sub-region
-                        int relX = Math.Abs((col + 1) - centre);
-                        int relY = Math.Abs((row + 1) - centre);
-                        double hyp = Math.Sqrt((double)(Math.Pow(relX, 2)) + (Math.Pow(relY, 2)));
+                        int centrePixelStart = pixelStart - (col - Radius);
+                        int line = (int)Math.Floor((double)centrePixelStart / (double)stride);
 
-                        // get a gaussian weight for this distance
-                        double weight = dist.CumulativeDistribution(Radius - hyp);
-                        weightCumulative += weight;
-
-                        // add the weighted RGB values to the array
-                        for (int p = 0; p < 3; p++)
+                        // check pixel lies within bound of image
+                        if ((pixelStart >= 0) && (pixelStart < rgbValues.Length))
                         {
-                            rgbCumulative[p] += rgbValues[pixelStart + p] * weight;
+                            // check pixel hasn't wrapped to different line
+                            int lineOfThisPixel = (int)Math.Floor((double)pixelStart / (double)stride);
+                            if (line == lineOfThisPixel)
+                            {
+
+                                // work out the distance from the centre of the sub-region
+                                int relX = Math.Abs((col + 1) - centre);
+                                int relY = Math.Abs((row + 1) - centre);
+                                double hyp = Math.Sqrt((double)(Math.Pow(relX, 2)) + (Math.Pow(relY, 2)));
+
+                                // get a gaussian weight for this distance
+                                double weight = dist.CumulativeDistribution(Radius - hyp);
+                                weightCumulative += weight;
+
+                                // add the weighted RGB values to the array
+                                for (int p = 0; p < 3; p++)
+                                {
+                                    rgbCumulative[p] += rgbValues[pixelStart + p] * weight;
+                                }
+                            }
                         }
                     }
                 }
