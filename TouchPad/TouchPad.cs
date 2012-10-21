@@ -67,10 +67,20 @@ namespace PolyglotFramework.TouchPad
         {
             if (this.connected)
             {
-                // intensity is a 0 <= float < 1
+                // intensity is a 0 <= float <= 1
                 // powerstring will be the 1st 3 decimal places of intensity, but not the leading 0 or the decimal point
-                string powerString = intensity.ToString("0.000").Substring(2) + "\n";
-                //Console.WriteLine("Sending power: {0}", powerString);
+                string powerString;
+                if (intensity == 1f)
+                {
+                    // special case to avoid 1 == 0 (substring(2) of 1.000 == 0.000)
+                    // not elegant, but hey ho
+                    powerString = "999";
+                }
+                else
+                {
+                    powerString = intensity.ToString("0.000").Substring(2);
+                }
+                powerString += "\n";
                 byte[] outBuffer = Encoding.UTF8.GetBytes(powerString);
                 this.s.Send(outBuffer);
             }
