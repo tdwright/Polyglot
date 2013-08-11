@@ -10,11 +10,24 @@ namespace PolyglotFramework
 
         const int MaxGausRadius = 5;
 
+        /// <summary>
+        /// Returns a single pixel from an image.
+        /// </summary>
+        /// <param name="i">The image to read from</param>
+        /// <param name="p">The proportional location within the image</param>
+        /// <returns></returns>
         static public Color GetPixel(Bitmap i, ProportionPoint p)
         {
             return GetGaussianPixel(i, p, 0);
         }
 
+        /// <summary>
+        /// Returns a gaussian weighted average of pixels centred on a point
+        /// </summary>
+        /// <param name="Source"></param>
+        /// <param name="Coords"></param>
+        /// <param name="Radius"></param>
+        /// <returns></returns>
         static public Color GetGaussianPixel(Bitmap Source, ProportionPoint Coords, int Radius)
         {
             if ((Radius > MaxGausRadius) || (Radius < 0)) throw new ArgumentOutOfRangeException("Radius", "Radius must be >= 0 and < MaxGausRadius");
@@ -110,6 +123,12 @@ namespace PolyglotFramework
             return colourPixel;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bm"></param>
+        /// <param name="stride"></param>
+        /// <returns></returns>
         private static byte[] GetBytesFromImage(Bitmap bm, out int stride)
         {
             Rectangle r = new Rectangle(0, 0, bm.Width, bm.Height);

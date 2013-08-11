@@ -90,6 +90,7 @@
     <Compile Include="Acquisition\WebcamSelection.Designer.cs">
       <DependentUpon>WebcamSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Support\ColourTools.cs" />
     <Compile Include="Support\Events.cs" />
     <Compile Include="Support\Exceptions.cs" />
     <Compile Include="Support\ExtensionMethods.cs" />
